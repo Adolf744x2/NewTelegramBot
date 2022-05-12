@@ -32,12 +32,6 @@ namespace Telegram.Bot.Examples.Polling
         {
             var handler = update.Type switch
             {
-                // UpdateType.Unknown:
-                // UpdateType.ChannelPost:
-                // UpdateType.EditedChannelPost:
-                // UpdateType.ShippingQuery:
-                // UpdateType.PreCheckoutQuery:
-                // UpdateType.Poll:
                 UpdateType.Message => BotOnMessageReceived(botClient, update.Message!),
                 UpdateType.EditedMessage => BotOnMessageReceived(botClient, update.EditedMessage!),
                 UpdateType.CallbackQuery => BotOnCallbackQueryReceived(botClient, update.CallbackQuery!),
